@@ -1,0 +1,264 @@
+<html>
+<head>
+<script type="text/javascript" src="validate.js"></script>
+</head>
+
+
+
+<body>
+<form action="#" name="ADMISSION FORM" onsubmit="return(validate());">
+
+
+
+<table cellpadding="2" width="30%" bgcolor="99FFFF" align="center"
+cellspacing="2">
+
+
+
+<tr>
+<td colspan=2>
+<center><font size=6><b>ADMISSION FORM</b></font></center></td>
+</tr>
+
+
+
+
+<tr>
+<td>Name</td>
+<td><input type=text name=textnames id="textname" size="30"></td>
+</tr>
+
+
+
+
+<tr>
+<td>Father Name</td>
+<td><input type="text" name="Father name" id="Father Name"
+size="30"></td>
+</tr>
+
+<tr>
+<td>Mother Name</td>
+<td><input type="text" name="Mother name" id="Mother Name"
+size="30"></td>
+</tr>
+
+<tr>
+<td>Postal Address</td>
+<td><input type="text" name="paddress" id="paddress" size="30"></td>
+</tr>
+
+
+
+
+<tr>
+<td>Personal Address</td>
+<td><input type="text" name="personaladdress"
+id="personaladdress" size="30"></td>
+</tr>
+
+
+
+
+<tr>
+<td>Sex</td>
+<td><input type="radio" name="sex" value="male" size="10">Male
+<input type="radio" name="sex" value="Female" size="10">Female</td>
+</tr>
+
+
+
+<tr>
+<td>City</td>
+<td><select name="City">
+<option value="-1" selected>select..</option>
+<option value="Faridabad">FARIDABAD</option>
+<option value="Ramnagar">RAMNAGAR</option>
+</select></td>
+</tr>
+
+
+
+<tr>
+<td>Course</td>
+<td><select name="Course">
+<option value="-1" selected>select..</option>
+<option value="MCA">MCA</option>
+<option value="BCA">BCA</option>
+</select></td>
+</tr>
+
+
+
+<tr>
+<td>District</td>
+<td><select name="District">
+<option value="-1" selected>select..</option>
+<option value="Nainital">NAINITAL</option>
+<option value="Faridabad">FARIDABAD</option>
+</select></td>
+</tr>
+
+
+
+
+<tr>
+<td>State</td>
+<td><select Name="State">
+<option value="-1" selected>select..</option>
+<option value="Haryana">HARYANA</option>
+<option value="Uttarakhand">UTTARAKHAND</option>
+</select></td>
+</tr>
+
+
+
+
+<tr>
+<td>PinCode</td>
+<td><input type="text" name="pincode" id="pincode" size="8"></td>
+
+
+
+
+</tr>
+<tr>
+<td>Email Id</td>
+<td><input type="text" name="email id" id="emailid" size="30"></td>
+</tr>
+
+    
+
+<tr>
+<td>DOB</td>
+<td><pre></label><select name=mm><option>mm</option><option>jan</option><option>feb</option><option>mar</option><option>apr</option><option>may</option>
+<option>june</option><option>july</option><option>aug</option><option>sep</option><option>oct</option>
+<option>nov</option><option>dec</option></select><select name=dd><option>dd</option>
+<option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+<option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
+<option>11</option><option>12</option><option>13</option><option>14</option><option>15</option>
+<option>16</option><option>17</option><option>18</option><option>19</option><option>20</option>
+<option>21</option><option>22</option><option>23</option><option>24</option><option>25</option>
+<option>26</option><option>27</option><option>28</option><option>29</option><option>30</option>
+<option>31</option></select><input type=text name=yy size=4><label>yyyy</label> 
+</pre</td>
+</tr>
+
+<tr>
+<td>MobileNo</td>
+<td><input type="text" name="mobileno" id="mobileno" size="10"></td>
+</tr>
+<tr>
+
+
+
+
+<td><input type="reset"></td>
+<td colspan="2"><input type="submit" value="Submit" /></td>
+</tr>
+
+
+
+
+
+</table>
+</form>
+</body>
+</html>
+
+<script>
+
+Form Validation
+
+function validate()
+{ 
+   if( document.StudentRegistration.textnames.value == "" )
+   {
+     alert( "Please provide your Name!" );
+     document.StudentRegistration.textnames.focus() ;
+     return false;
+   }
+   if( document.StudentRegistration.fathername.value == "" )
+   {
+     alert( "Please provide your Father Name!" );
+     document.StudentRegistration.fathername.focus() ;
+     return false;
+   }
+   
+   if( document.StudentRegistration.paddress.value == "" )
+   {
+     alert( "Please provide your Postal Address!" );
+     document.StudentRegistration.paddress.focus() ;
+     return false;
+   }
+   if( document.StudentRegistration.personaladdress.value == "" )
+   {
+     alert( "Please provide your Personal Address!" );
+     document.StudentRegistration.personaladdress.focus() ;
+     return false;
+   }
+   if ( ( StudentRegistration.sex[0].checked == false ) && ( StudentRegistration.sex[1].checked == false ) )
+   {
+   alert ( "Please choose your Gender: Male or Female" );
+   return false;
+   }   
+   if( document.StudentRegistration.City.value == "-1" )
+   {
+     alert( "Please provide your City!" );
+     document.StudentRegistration.City.focus() ;
+     return false;
+   }   
+   if( document.StudentRegistration.Course.value == "-1" )
+   {
+     alert( "Please provide your Course!" );
+    
+     return false;
+   }   
+   if( document.StudentRegistration.District.value == "-1" )
+   {
+     alert( "Please provide your Select District!" );
+    
+     return false;
+   }   
+   if( document.StudentRegistration.State.value == "-1" )
+   {
+     alert( "Please provide your Select State!" );
+     
+     return false;
+   }
+   if( document.StudentRegistration.pincode.value == "" ||
+           isNaN( document.StudentRegistration.pincode.value) ||
+           document.StudentRegistration.pincode.value.length != 6 )
+   {
+     alert( "Please provide a pincode in the format ######." );
+     document.StudentRegistration.pincode.focus() ;
+     return false;
+   }
+ var email = document.StudentRegistration.emailid.value;
+  atpos = email.indexOf("@");
+  dotpos = email.lastIndexOf(".");
+ if (email == "" || atpos < 1 || ( dotpos - atpos < 2 )) 
+ {
+     alert("Please enter correct email ID")
+     document.StudentRegistration.emailid.focus() ;
+     return false;
+ }
+  if( document.StudentRegistration.dob.value == "" )
+   {
+     alert( "Please provide your DOB!" );
+     document.StudentRegistration.dob.focus() ;
+     return false;
+   }
+  if( document.StudentRegistration.mobileno.value == "" ||
+           isNaN( document.StudentRegistration.mobileno.value) ||
+           document.StudentRegistration.mobileno.value.length != 10 )
+   {
+     alert( "Please provide a Mobile No in the format 123." );
+     document.StudentRegistration.mobileno.focus() ;
+     return false;
+   }
+   return( true );
+}
+
+</script>
+
